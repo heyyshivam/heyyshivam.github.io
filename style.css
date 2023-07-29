@@ -1,0 +1,263 @@
+
+html, body {
+      cursor: url(cursor.png), auto !important;
+}
+
+* {
+      box-sizing: border-box;
+      margin: 0%;
+      padding: 0%;
+      font-family: "Darker Grotesque" !important;
+      left:0%;
+}
+
+
+/*--------------- hero section --------------- */
+
+.video-container {
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+}
+
+video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+.video-container::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #1b1b1b;
+      opacity: 0.8;
+}
+
+.header {
+      position: absolute;
+      /* padding: 10px 16px; */
+      background: black;
+      color: #f1f1f1;
+      width:100%;
+      height: 53px;
+      /* top: 50%;
+      left: 45%; */
+      /* transform: translate(-50%, -50%); */
+      left: 0%
+}
+
+.header h1 {
+      color: #d3ae87;
+      font-size: 80px !important;
+}
+
+.sticky {
+      position: fixed;
+      top: 0;
+      width: 100%;
+    }
+
+.sticky + .content {
+      padding-top: 102px;
+    }
+
+@media(max-width: 900px) {
+      .header {
+            left: 0%;
+      }
+
+      .header h1 {
+            font-size: 34px !important;
+            text-align: center;
+      }
+}
+
+/*--------------- about section starts  --------------- */
+
+.content {
+      position: absolute;
+      margin-top: 100vh;
+      width: 100%;
+      background: #161616;
+}
+
+section {
+      padding: 0px 0;
+}
+
+.section-index {
+      color: #d3ae87;
+      font-weight: bolder;
+      font-size: 20px;
+      font-family: Poppins !important;
+}
+
+.section-heading {
+      color: grey;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 18px;
+}
+
+.section-subheading {
+      color: grey;
+      margin: 10px 0;
+}
+
+.section-info {
+      font-size: 24px;
+      color: grey;
+}
+
+.more {
+      margin: 40px 0;
+}
+
+button {
+      background: yellow;
+      border: .3pt solid rgba(184, 140, 93, 0.7);
+      text-transform: uppercase !important;
+      font-size: 12px !important;
+      letter-spacing: 2px;
+      padding: 18px 36px;
+}
+
+/*--------------- services section starts  --------------- */
+
+.services {
+      background: #161616;
+}
+
+.service {
+      margin: 30px 0;
+}
+
+.icon ion-icon {
+      font-size: 36px;
+      color: #d3ae87;
+}
+
+.icon-title {
+      font-size: 28px;
+      margin-bottom: 4px;
+      color: rgb(182, 182, 182);
+      font-weight: lighter;
+}
+
+/*--------------- our team section starts  --------------- */
+
+.team-member, .team-img {
+      position:relative;
+}
+
+.team-img {
+      background: grey;
+      height: 400px;
+      width: 340px;
+      text-align: center;
+}
+
+.members {
+      margin: 50px 0;
+}
+
+.team-title {
+      margin: 20px 0;
+}
+
+.team-title h5 {
+      font-size: 28px;
+}
+
+.team-title span {
+      font-size: 20px;
+}
+
+.team-member {
+      overflow: hidden;
+}
+
+.team-one {
+      background: url(photo.png) no-repeat 50% 50%;
+      background-size: cover;
+}
+
+/*--------------- newsletter section starts  --------------- */
+
+.newsletter {
+      padding: 30px 0;
+      background: #161616;
+}
+
+.newsletter input {
+      text-transform: uppercase;
+}
+
+.newsletter .news-data {
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+}
+
+.newsletter h1,h6 {
+      color: #fff;
+      margin-bottom: 30px;
+}
+
+.newsletter .form-control {
+      height: 50px;
+      border-color: #fff;
+      border-radius: 0 !important;
+}
+
+.form-control:focus {
+      box-shadow: none !important;
+      border: none !important;
+}
+
+::placeholder {
+      letter-spacing: 4px;
+}
+
+.newsletter .btn {
+      min-height: 50px;
+      padding: 0 30px;
+      border-radius: 0;
+      background: #000;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-family: Poppins !important;
+}
+
+section.newsletter {
+      margin-bottom: 25px;
+}
+
+.col-md-2.section-index.wow.fadeInUp.animated {
+      margin-top: 15px;
+  }
+
+.container-fluid {
+      background: whitesmoke;
+  }
+
+.fixed-bottom-image {
+      /* Set the image to position fixed at the bottom */
+      position: fixed;
+      bottom: 0;
+      left: 0%;
+      width:100%; 
+      height:auto;
+    }
+

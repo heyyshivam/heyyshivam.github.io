@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Mastering AI Tools in 2 hours</title>
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="style.css">
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- icons -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+      <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+
+<body>
+      
+      <a name="home"></a>
+      <div class="wrapper">
+
+            <!--------------- hero section starts here --------------->
+
+            <div class="video-container">
+                  <video playsinline autoplay muted loop id="bgvid">
+                        <source src="/videobg.mp4" type="video/mp4">
+                  </video>
+            </div>
+
+            <!--------------- hero section ends here --------------->
+
+            <div class="content">
+
+            <!--------------- about section starts here --------------->
+
+            <a name="about"></a>
+
+           <section class="story">
+      
+
+                  <div class="container-fluid">
+
+                        <div class="section-data" style="margin-top: 100vh">
+                              <div class="row">
+                                    <video width=100% height=auto autoplay loop muted>
+                                          <source src="/movie.mp4" type="video/mp4" />
+                                    </video>
+
+                              </div>
+                        </div>
+                  </div>
+
+           </section>
+
+            <a name="services"></a>
+
+           <section class="services">
+
+            <div class="container-fluid">
+
+                  <div class="section-data">
+
+                        <div class="row">
+                              <div class="col-md-8 section-heading wow fadeInUp">
+                                    <a href="http://paytm.me/p-w89xk">
+                                    <video width=100% height=auto autoplay loop muted>
+                                          <source src="/page3.mp4" type="video/mp4" />
+                                    </video>
+                                    </a>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+           </section>
+
+           <section class="team">
+
+            <div class="container-fluid" style="margin-top: 100vh;">
+
+                  <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s">Know Your Mentor</div>
+                        <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">Cyber Forensic Expert</div>
+                  </div>
+
+                  <div class="row members">
+
+                        <div class="col-md-4"></div>
+
+                        <div class="col-md-3 wow fadeInUp" data-wow-delay="0.5s">
+                              <div class="team-member">
+                                    <div class="team-img team-one"></div>
+                              </div>
+                              <div class="team-title">
+                                    <h5>Ms. Sarishma</h5>
+                                    <span>A renowned cyber forensic expert who has been training students in the field of cloud computing, forensic, and big data for more than four years. With over 5000 students under her tutelage, Ms. Sarishma is a highly sought-after instructor in the field. 
+
+                                          In addition to her teaching duties, she has also authored two books on a critical topic in the field of computer science: Java's syntax. Her books are widely regarded as authoritative resources on the subject and are used by students and professionals alike. 
+                                          
+                                          Ms. Sarishma's expertise in cyber forensic, combined with her passion for teaching and writing, make her a apt choice for enthusiasts to learn this new age technology and boost their productivity.</span>
+                              </div>
+                        </div>
+                  </div>
+
+            </div>
+
+            </section>
+
+        <a href="http://paytm.me/p-w89xk"><img class="fixed-bottom-image" src="footer.jpg"></a>
+      </div>
+      
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+
+// navigation starts here
+$("#toggle").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $("#resize ul li a").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $(".close-btn").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+new WOW().init();
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
+</body>
+</html>
